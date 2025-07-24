@@ -1,0 +1,7 @@
+<!--imgタグという画像を表示するタグを使用してる--!>
+<!--画像を横に並べるのみ--!>
+<div class="flex space-x-10">
+  <img src="icon1.png" alt="画像1" class="w-32 h-auto rounded-2xl" />
+  <img src="icon2.png" alt="画像2" class="w-32 h-auto rounded-2xl" />
+  <img src="icon3.png" alt="画像3" class="w-32 h-auto rounded-2xl" />
+</div>

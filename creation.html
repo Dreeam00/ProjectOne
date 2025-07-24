@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>レトロデザイン制作の過程</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gradient-to-l from-blue-50 to-blue-300 text-gray-900 font-sans overflow-x-hidden">
+          <!-- ナビゲーションバー（Aeroデザイン） -->
+    <nav class="mt-4 flex flex-col items-center gap-2 w-screen p-5 bg-blue-900 md:flex-row md:justify-center md:gap-6 space-x-50">
+      <a href="#sect1" class="text-2xl text-white">アイデア発想</a>
+      <a href="#sect2" class="text-2xl text-white">デザイン設計</a>
+      <a href="#sect3" class="text-2xl text-white">実装</a>
+      <a href="#sect4" class="text-2xl text-white">検証</a>
+    </nav>
+  <div class="w-full min-h-[400px] bg-gradient-to-b from-blue-200 via-blue-400 to-blue-900 pt-8 pb-16 px-2 md:px-0">
+    <div class="max-w-5xl mx-auto">
+      <header class="mb-12">
+        <h1 class="text-4xl md:text-6xl font-extrabold text-blue-900 drop-shadow-xl tracking-tight bg-gradient-to-r from-blue-700 via-blue-400 to-blue-700 bg-clip-text text-transparent mb-2">レトロデザイン制作の過程</h1>
+        <p class="text-lg md:text-2xl text-blue-800/90 font-medium drop-shadow-sm">AeroやレトロWebデザインを現代的に再現する</p>
+        <!-- 用語解説Aeroボックス -->
+        <div class="mt-8 grid gap-4 md:grid-cols-3">
+          <div class="p-5 bg-white/70 rounded-2xl border border-blue-200 shadow-xl backdrop-blur-md">
+            <h3 class="text-xl font-bold text-blue-700 mb-2">Tailwind CSS</h3>
+            <p class="text-base text-blue-900">ユーティリティクラス（小さな機能ごとのクラス）を組み合わせて、素早く美しいWebデザインを作れるCSSフレームワーク。<br>複雑なCSSを書かずに、HTMLのクラス名だけでデザインを調整できるのが特徴です。</p>
+          </div>
+          <div class="p-5 bg-white/70 rounded-2xl border border-blue-200 shadow-xl backdrop-blur-md">
+            <h3 class="text-xl font-bold text-blue-700 mb-2">Aeroデザイン</h3>
+            <p class="text-base text-blue-900">Windows Vista/7時代に登場した「ガラスのような半透明・ぼかし・光沢感」が特徴のUIデザイン。<br>奥行きや透明感、グラデーションを多用し、立体的で未来感のある見た目を演出します。</p>
+          </div>
+          <div class="p-5 bg-white/70 rounded-2xl border border-blue-200 shadow-xl backdrop-blur-md">
+            <h3 class="text-xl font-bold text-blue-700 mb-2">Aquaデザイン</h3>
+            <p class="text-base text-blue-900">AppleのMac OS Xで採用された「水滴のような透明感・光沢・丸み」が特徴のUIデザイン。<br>カラフルで柔らかい印象、ガラス玉やジェルのような質感がポイントです。</p>
+          </div>
+        </div>
+      </header>
+      
+      <section class="relative my-12 p-8 md:p-16 bg-gradient-to-br from-white/90 via-blue-100/80 to-blue-200/70 backdrop-blur-2xl rounded-3xl border border-blue-300 shadow-2xl overflow-hidden group transition-all duration-500" id="sect1">
+        <div class="absolute left-0 top-0 w-2 h-full bg-gradient-to-b from-blue-400 via-blue-300 to-blue-100 rounded-l-3xl blur-sm opacity-70"></div>
+        <div class="absolute right-8 top-8 w-24 h-24 bg-gradient-to-tr from-blue-300/60 to-white/0 rounded-full blur-2xl opacity-60 animate-pulse"></div>
+        <div class="flex items-center gap-4 mb-6">
+          <span class="w-10 h-10 flex items-center justify-center drop-shadow-lg">
+            <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" fill="#e0f2fe"/>
+              <path d="M8 12l2 2 4-4" stroke="#0ea5e9" stroke-width="2.5"/>
+            </svg>
+          </span>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-blue-900 drop-shadow-lg tracking-tight bg-gradient-to-r from-blue-700 via-blue-400 to-blue-700 bg-clip-text text-transparent">アイデア発想</h2>
+        </div>
+        <p class="text-xl md:text-2xl text-blue-800 font-medium leading-relaxed drop-shadow-sm mb-6">
+          まず、Wayback Machineなどで2000年代のWebデザインを調査し、<br>AeroやAquaなどの特徴をリストアップ。<br>
+          どんな要素が「レトロ感」や「未来感」を生み出しているのかを分析し<br>以下の要素を特定しました。
+        </p>
+        <ul class="list-disc pl-8 text-blue-900/90 text-lg space-y-2">
+          <li>
+            グラデーションや半透明、ガラス風のパネル
+          </li>
+          <li>
+            大きなロゴや立体的なボタン
+            <ul class="mt-2 ml-2">
+              <li class="my-2 p-4 bg-white/70 rounded-xl border border-blue-200 shadow backdrop-blur-md text-blue-900 text-base list-none">
+                <strong>立体的なボタン：</strong>影やグラデーションで浮き上がって見えるボタン。押しやすさ・目立たせるために使います。
+              </li>
+            </ul>
+          </li>
+          <li>
+            アイコンやイラストの多用
+          </li>
+          <li>
+            青系・水色系の配色
+            <ul class="mt-2 ml-2">
+              <li class="my-2 p-4 bg-white/70 rounded-xl border border-blue-200 shadow backdrop-blur-md text-blue-900 text-base list-none">
+                <strong>配色：</strong>色の組み合わせ。青系は信頼感や清潔感を与えるため、レトロデザインでもよく使われます。
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      
+      <section class="relative my-12 p-8 md:p-16 bg-gradient-to-br from-blue-50/90 via-white/80 to-blue-200/60 backdrop-blur-2xl rounded-3xl border border-blue-200 shadow-2xl overflow-hidden group transition-all duration-500" id="sect2">
+        <div class="absolute right-0 top-0 w-2 h-full bg-gradient-to-b from-blue-200 via-blue-400 to-blue-100 rounded-r-3xl blur-sm opacity-70"></div>
+        <div class="absolute left-8 bottom-8 w-24 h-24 bg-gradient-to-tr from-blue-200/60 to-white/0 rounded-full blur-2xl opacity-60 animate-pulse"></div>
+        <div class="flex items-center gap-4 mb-6">
+          <span class="w-10 h-10 flex items-center justify-center drop-shadow-lg">
+            <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4" y="4" width="16" height="16" rx="4" fill="#dbeafe"/>
+              <path d="M8 12h8" stroke="#2563eb" stroke-width="2.5"/>
+            </svg>
+          </span>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-blue-900 drop-shadow-lg tracking-tight bg-gradient-to-r from-blue-400 via-blue-700 to-blue-400 bg-clip-text text-transparent">デザイン設計</h2>
+        </div>
+        <p class="text-xl md:text-2xl text-blue-800 font-medium leading-relaxed drop-shadow-sm mb-6">
+          Tailwind CSSを使い、Aero風のガラス感やグラデーション、立体感を再現。<br>
+          レスポンシブ対応や、ボタン・カードのホバー演出も工夫しました。
+        </p>
+        <ul class="list-disc pl-8 text-blue-900/90 text-lg space-y-2">
+          <li>
+            ぼかし, 透明度, 影, ふちの活用
+            <ul class="mt-2 ml-2">
+              <li class="my-2 p-4 bg-white/70 rounded-xl border border-blue-200 shadow backdrop-blur-md text-blue-900 text-base list-none">
+                <strong>ぼかし：</strong>背景やパネルの後ろを少しにじませて、奥行きやガラス感を出す効果。<br>
+                <strong>影：</strong>要素の下や周りに影をつけて立体感を出すテクニック。<br>
+                <strong>ふち：</strong>枠線や縁取り。要素を目立たせたり、区切りをつけるために使います。
+              </li>
+            </ul>
+          </li>
+          <li>
+            画像を入れてレトロデザインを強調
+          </li>
+          <li>
+            アニメーションやグロー効果
+            <ul class="mt-2 ml-2">
+              <li class="my-2 p-4 bg-white/70 rounded-xl border border-blue-200 shadow backdrop-blur-md text-blue-900 text-base list-none">
+                <strong>アニメーション：</strong>動きをつけて注目させたり、操作感を向上させる演出。<br>
+                <strong>グロー効果：</strong>光っているような見た目。ボタンやアイコンのホバー時に使うと目立ちます。
+              </li>
+            </ul>
+          </li>
+          <li>
+            セクションごとに異なるグラデーション
+            <ul class="mt-2 ml-2">
+              <li class="my-2 p-4 bg-white/70 rounded-xl border border-blue-200 shadow backdrop-blur-md text-blue-900 text-base list-none">
+                <strong>グラデーション：</strong>セクションごとに色の流れを変えることで、ページ全体にリズムや変化をつけます。
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+        
+      <section class="relative my-12 p-8 md:p-16 bg-gradient-to-br from-blue-100/90 via-blue-50/80 to-white/70 backdrop-blur-2xl rounded-3xl border border-blue-100 shadow-2xl overflow-hidden group transition-all duration-500" id="sect3">
+        <div class="absolute left-0 bottom-0 w-2 h-full bg-gradient-to-t from-blue-200 via-blue-400 to-blue-100 rounded-l-3xl blur-sm opacity-70"></div>
+        <div class="absolute right-8 top-8 w-24 h-24 bg-gradient-to-tr from-blue-100/60 to-white/0 rounded-full blur-2xl opacity-60 animate-pulse"></div>
+        <div class="flex items-center gap-4 mb-6">
+          <span class="w-10 h-10 flex items-center justify-center drop-shadow-lg">
+            <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="#818cf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4" y="4" width="16" height="16" rx="4" fill="#ede9fe"/>
+              <path d="M12 8v8m-4-4h8" stroke="#6366f1" stroke-width="2.5"/>
+            </svg>
+          </span>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-blue-900 drop-shadow-lg tracking-tight bg-gradient-to-r from-blue-300 via-blue-600 to-blue-300 bg-clip-text text-transparent">実装</h2>
+        </div>
+        <p class="text-xl md:text-2xl text-blue-800 font-medium leading-relaxed drop-shadow-sm mb-6">
+          では、実際にTailwind CSSを使ってコーディングを行います。<br>
+          まず、基本的なHTML構造を作成します。
+        </p>
+        <ul class="list-disc pl-8 text-blue-900/90 text-lg space-y-2">
+          <li>
+            HTMLの基本構造
+            <ul class="mt-2 ml-2">
+              <li class="my-2 p-4 bg-white/70 rounded-xl border border-blue-200 shadow backdrop-blur-md text-blue-900 text-base list-none">
+                <strong>HTML：</strong>Webページの骨組みを作る言語。要素をタグで囲んで構造を定義します。
+              </li>
+            </ul>
+          </li>
+          <li>
+            Tailwind CSSの導入
+            <ul class="mt-2 ml-2">
+              <li class="my-2 p-4 bg-white/70 rounded-xl border border-blue-200 shadow backdrop-blur-md text-blue-900 text-base list-none">
+                <strong>Tailwind CSS：</strong>ユーティリティクラスを使って、スタイルを簡単に適用できるCSSフレームワーク。
+              </li>
+            </ul>
+          </li>
+          <li>
+            レスポンシブデザインの実装
+            <ul class="mt-2 ml-2">
+              <li class="my-2 p-4 bg-white/70 rounded-xl border border-blue-200 shadow backdrop-blur-md text-blue-900 text-base list-none">
+                <strong>レスポンシブデザイン：</strong>画面サイズに応じてレイアウトやスタイルを変える手法。<br>
+                Tailwindでは、`md:`や`lg:`などのプレフィックスで簡単に指定できます。
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <p class="text-lg text-blue-900/80 mt-4">
+          以下のリンクのコードは、基本的なHTML構造の例です。Tailwind CSSのクラスを使って、スタイルを適用しています
+        </p>
+        <!-- テストコード解説Aeroボックス -->
+        <div class="my-4 p-4 bg-white/80 border border-blue-200 rounded-2xl shadow backdrop-blur-md">
+          <h3 class="text-lg font-bold text-blue-700 mb-1">テストコード解説</h3>
+          <ul class="list-disc pl-6 text-blue-900 text-base space-y-1">
+            <li>この<code>iframe</code>には、基本的なHTML構造とTailwind CSSのクラスを使ったサンプルコード（<code>sample.html</code>）が表示されます。</li>
+            <li>主な内容：<br>
+              ・Aero風のパネルやボタン、グラデーション背景の実装例<br>
+              ・レスポンシブ対応や、SVGアイコンの使い方<br>
+              ・実際の見た目や動作をブラウザ上で確認できます
+            </li>
+            <li>テスト目的：<br>
+              ・デザインやレイアウトが意図通りに表示されるか<br>
+              ・Tailwindのクラス指定が正しく効いているか<br>
+              ・Aero/Aqua表現が再現できているかを検証
+            </li>
+          </ul>
+        </div>
+        <!-- ▼Aero風サンプル1：基本構造とデザイン-->
+        <section class="my-8 p-6 bg-white/70 rounded-2xl border border-blue-200 shadow-xl backdrop-blur-md">
+          <h3 class="text-2xl font-bold text-blue-700 mb-2">1. 基本的なHTML構造とAeroデザイン</h3>
+          <p class="text-base text-blue-900 mb-2">Tailwind CSSのユーティリティクラスでAero風のパネルやグラデーション背景を実装したサンプルです。<br>各要素のクラス名を確認しながら、Aeroデザインの基本を学べます。</p>
+          <a href="sample-code.txt" class="text-blue-600 hover:underline">サンプルコードを見る</a>
+          <div class="my-4">
+            <iframe class="w-full h-64 rounded-lg border border-blue-300 shadow-lg" src="sample.html" title="Aeroデザインのサンプルコード"></iframe>
+          </div>
+          <div class="p-3 bg-white/80 border border-blue-100 rounded-xl shadow backdrop-blur-sm">
+            <strong>テストポイント：</strong> パネルやボタンのAero表現、グラデーション、レスポンシブ対応、SVGアイコンの使い方など。
+          </div>
+        </section>
+
+        <!-- ▼Aero風サンプル2：立体的なボタンやパネル-->
+        <section class="my-8 p-6 bg-white/70 rounded-2xl border border-blue-200 shadow-xl backdrop-blur-md">
+          <h3 class="text-2xl font-bold text-blue-700 mb-2">2. 立体的なボタン・パネルの実装</h3>
+          <p class="text-base text-blue-900 mb-2">Aeroデザインの特徴である立体感や透明感を表現したボタン・パネルのサンプルです。<br>影やグラデーション、ホバー演出の工夫を体験できます。</p>
+          <a href="sample-code2.txt" class="text-blue-600 hover:underline">サンプルコードを見る</a>
+          <div class="my-4">
+            <iframe class="w-full h-64 rounded-lg border border-blue-300 shadow-lg" src="sample2.html" title="Aero風ボタンのサンプルコード"></iframe>
+          </div>
+          <div class="p-3 bg-white/80 border border-blue-100 rounded-xl shadow backdrop-blur-sm">
+            <strong>テストポイント：</strong> ボタンやパネルの立体感、透明感、ホバー時のグロー効果など。
+          </div>
+        </section>
+
+        <!-- ▼Aero風サンプル3：画像最適化・アクセシビリティ-->
+        <section class="my-8 p-6 bg-white/70 rounded-2xl border border-blue-200 shadow-xl backdrop-blur-md">
+          <h3 class="text-2xl font-bold text-blue-700 mb-2">3. 画像の最適化・アクセシビリティ対応</h3>
+          <p class="text-base text-blue-900 mb-2">画像の軽量化やalt属性の付与など、アクセシビリティやパフォーマンスに配慮したサンプルです。</p>
+          <a href="sample-code3.txt" class="text-blue-600 hover:underline">サンプルコードを見る</a>
+          <div class="my-4">
+            <iframe class="w-full h-64 rounded-lg border border-blue-300 shadow-lg" src="sample3.html" title="画像の最適化、アクセシビリティの考慮"></iframe>
+          </div>
+          <div class="p-3 bg-white/80 border border-blue-100 rounded-xl shadow backdrop-blur-sm">
+            <strong>テストポイント：</strong> 画像の最適化、alt属性、アクセシビリティ対応、表示速度の確認など。
+          </div>
+        </section>
+      </section>
+      
+      <section class="relative my-12 p-8 md:p-16 bg-gradient-to-br from-blue-100/90 via-blue-50/80 to-white/70 backdrop-blur-2xl rounded-3xl border border-blue-100 shadow-2xl overflow-hidden group transition-all duration-500" id="sect4">
+        <div class="absolute left-0 bottom-0 w-2 h-full bg-gradient-to-t from-blue-200 via-blue-400 to-blue-100 rounded-l-3xl blur-sm opacity-70"></div>
+        <div class="absolute right-8 top-8 w-24 h-24 bg-gradient-to-tr from-blue-100/60 to-white/0 rounded-full blur-2xl opacity-60 animate-pulse"></div>
+        <div class="flex items-center gap-4 mb-6">
+          <span class="w-10 h-10 flex items-center justify-center drop-shadow-lg">
+            <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none" stroke="#818cf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="4" y="4" width="16" height="16" rx="4" fill="#ede9fe"/>
+              <path d="M12 8v8m-4-4h8" stroke="#6366f1" stroke-width="2.5"/>
+            </svg>
+          </span>
+          <h2 class="text-3xl md:text-5xl font-extrabold text-blue-900 drop-shadow-lg tracking-tight bg-gradient-to-r from-blue-300 via-blue-600 to-blue-300 bg-clip-text text-transparent">検証</h2>
+        </div>
+        <p class="text-xl md:text-2xl text-blue-800 font-medium leading-relaxed drop-shadow-sm mb-6">
+          実際にコーディングし、ブラウザでAero感やレスポンシブ挙動を確認。<br>
+          画像やSVGの最適化、アクセシビリティにも配慮しました。
+        </p>
+        <ul class="list-disc pl-8 text-blue-900/90 text-lg space-y-2">
+          <li>
+            各種ブラウザでの表示確認
+            <ul class="mt-2 ml-2">
+              <li class="my-2 p-4 bg-white/70 rounded-xl border border-blue-200 shadow backdrop-blur-md text-blue-900 text-base list-none">
+                <strong>ブラウザ：</strong>Webページを見るためのソフト。ChromeやSafari、Edgeなど。
+              </li>
+            </ul>
+          </li>
+          <li>
+            画像・SVGの最適化
+            <ul class="mt-2 ml-2">
+              <li class="my-2 p-4 bg-white/70 rounded-xl border border-blue-200 shadow backdrop-blur-md text-blue-900 text-base list-none">
+                <strong>最適化：</strong>画像やデータを軽くして、ページの表示を速くする工夫。
+              </li>
+            </ul>
+          </li>
+          <li>
+            アクセシビリティの考慮
+            <ul class="mt-2 ml-2">
+              <li class="my-2 p-4 bg-white/70 rounded-xl border border-blue-200 shadow backdrop-blur-md text-blue-900 text-base list-none">
+                <strong>アクセシビリティ：</strong>障害のある人や高齢者も使いやすいようにする配慮。
+              </li>
+            </ul>
+          </li>
+          <li>
+            ユーザーテストによる微調整
+            <ul class="mt-2 ml-2">
+              <li class="my-2 p-4 bg-white/70 rounded-xl border border-blue-200 shadow backdrop-blur-md text-blue-900 text-base list-none">
+                <strong>ユーザーテスト：</strong>実際に使ってもらい、使い勝手や問題点をチェックすること。
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <p>完成品は以下のリンクから確認できます。</p>
+        <ul class="list-disc pl-8 text-blue-900/90 text-lg space-y-2 mt-4">
+          <li>
+            <a href="Production-work.html" class="text-blue-600 hover:underline">完成品のデモサイト</a>
+          </li>
+          <li>
+            <a href="Production-work.txt" class="text-blue-600 hover:underline">完成品のソースコード</a>
+          </li>
+        </ul>
+      </section>
+      <footer class="mt-12 text-center text-gray-600 bg-white/90 backdrop-blur-2xl p-6 shadow-2xl border border-blue-200">
+      <p class="text-sm">© 2025 My Retro Design Research. All rights reserved.</p>
+    </footer>
+    </div>
+    <!-- 右下ポータルボタン -->
+    <a href="portal.html" class="fixed md:sticky z-50 bottom-6 right-6 md:bottom-6 md:right-6 flex items-center gap-2 px-5 py-3 rounded-full bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600 text-white font-bold shadow-xl border border-blue-200 backdrop-blur-lg hover:scale-105 hover:shadow-blue-400/50 transition-all duration-200" style="position:sticky; float:right;">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="#e0f2fe"/><path d="M12 8v4l3 3" stroke="#2563eb" stroke-width="2.5"/></svg>
+      ポータルへ
+    </a>
+  </div>
+</body>
+</html>

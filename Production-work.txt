@@ -76,15 +76,10 @@
         </div>
       </section>
       <!-- フッター -->
-      <footer class="mt-12 text-center text-gray-600 bg-white/90 backdrop-blur-2xl p-6 shadow-2xl border border-blue-200">
-      <p class="text-sm">© 2025 My Retro Design Research. All rights reserved.</p>
-    </footer>
+      <footer class="mt-12 text-center text-gray-600 bg-white/90 backdrop-blur-2xl p-6 shadow-2xl border border-blue-200 rounded-2xl">
+        <p class="text-sm">© 2025 Aero Retro Demo Site</p>
+      </footer>
     </div>
-    <!-- 右下ポータルボタン -->
-    <a href="portal.html" class="fixed md:sticky z-50 bottom-6 right-6 md:bottom-6 md:right-6 flex items-center gap-2 px-5 py-3 rounded-full bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600 text-white font-bold shadow-xl border border-blue-200 backdrop-blur-lg hover:scale-105 hover:shadow-blue-400/50 transition-all duration-200" style="position:sticky; float:right;">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="#e0f2fe"/><path d="M12 8v4l3 3" stroke="#2563eb" stroke-width="2.5"/></svg>
-      ポータルへ
-    </a>
   </div>
 </body>
 </html>
